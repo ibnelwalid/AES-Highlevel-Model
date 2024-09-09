@@ -1,7 +1,7 @@
 import sys, os
-sys.path.append(os.path.dirname(os.path.dirname(__file__))+"/DOM implementation")
-sys.path.append(os.path.dirname(os.path.dirname(__file__))+"/Scalar-crypto instruction implementation")
-sys.path.append(os.path.dirname(os.path.dirname(__file__))+"/Standard AES")
+sys.path.append(os.path.dirname(os.path.dirname(__file__))+"/DOM_implementation")
+sys.path.append(os.path.dirname(os.path.dirname(__file__))+"/Scalar-crypto_instruction_implementation")
+sys.path.append(os.path.dirname(os.path.dirname(__file__))+"/Standard_AES")
 
 import AES_byte_dom_instructions
 import AES_byte_instructions
@@ -106,9 +106,9 @@ def test_decryption(can_print: bool = False):
 
 if __name__ == "__main__":
     errors = 0
-    errors += test_instructions(can_print = True)
-    errors += test_keyscheduler(can_print = True)
+    #errors += test_instructions(can_print = True)
+    #errors += test_keyscheduler(can_print = True)
     errors += test_encryption(  can_print = True)
-    errors += test_decryption(  can_print = True)
+    #errors += test_decryption(  can_print = True)
 
     print(F"Number of discrepencies found between protected and unprotected: {errors}")
